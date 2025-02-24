@@ -114,38 +114,7 @@ ShiftLogix/
 
 ShiftLogix uses a MySQL database. Follow these steps to configure your database:
 
-1. **Create the Database and User:**
 
-   Log in to MySQL as root:
-   ```bash
-   mysql -u root -p
-   ```
-
-   Then run:
-   ```sql
-   CREATE DATABASE shiftlogix;
-   CREATE USER 'shiftlogix_user'@'localhost' IDENTIFIED BY 'AdminPassword1234';
-   GRANT ALL PRIVILEGES ON shiftlogix.* TO 'shiftlogix_user'@'localhost';
-   FLUSH PRIVILEGES;
-   ```
-
-2. **Database Connection Configuration:**
-
-   In your Flask configuration (usually in the `__init__.py`), the connection is set as:
-   ```python
-   app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://shiftlogix_user:AdminPassword1234@localhost/shiftlogix"
-   app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-   ```
-
-3. **Testing the MySQL Connection:**
-
-   Verify that the database is set up correctly:
-   ```bash
-   mysql -u root -p
-   SHOW DATABASES;
-   USE shiftlogix;
-   SHOW TABLES;
-   ```
 
 ## Running the Application
 
