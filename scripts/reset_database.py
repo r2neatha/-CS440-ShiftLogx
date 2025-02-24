@@ -21,17 +21,17 @@ def reset_database():
     """
     with app.app_context():
         print("Disabling foreign key checks...")
-        db.session.execute(text("SET FOREIGN_KEY_CHECKS = 0;"))  # ✅ Temporarily disable foreign key checks
+        db.session.execute(text("SET FOREIGN_KEY_CHECKS = 0;"))  # Temporarily disable foreign key checks
 
         print("Dropping all tables...")
         db.drop_all()  # ✅ Deletes all tables
 
         print("Re-enabling foreign key checks...")
-        db.session.execute(text("SET FOREIGN_KEY_CHECKS = 1;"))  # ✅ Re-enable foreign key checks
-        db.session.commit()  # ✅ Commit changes
+        db.session.execute(text("SET FOREIGN_KEY_CHECKS = 1;"))  #  Re-enable foreign key checks
+        db.session.commit()  #  Commit changes
 
         print("Recreating tables...")
-        db.create_all()  # ✅ Recreates tables
+        db.create_all()  #  Recreates tables
 
         print("Database has been successfully reset.")
 
