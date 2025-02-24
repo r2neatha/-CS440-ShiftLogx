@@ -1,4 +1,3 @@
-``markdown
 # ShiftLogix
 
 ShiftLogix is a full-stack web application designed to manage employee scheduling, time tracking, and authentication. The project uses a Flask-based backend with MySQL as the database engine and a simple HTML/CSS frontend. This README provides instructions to set up your development environment, install dependencies, configure the database, and run the application.
